@@ -1,0 +1,59 @@
+0 initialize git
+    git init
+
+======================================================================
+
+1 INITIALIZE NPM
+initialize npm to install 
+    npm init
+(this will create a package.json file)
+
+======================================================================
+
+2 INSTALL DEPENDENCIES 
+- install express as the "glue" for every file
+    npm install epress as the 
+- install express-handlebars as a templating engine for html pages
+    npm express-handlebars
+- install MySQL2 for creating connection and interacting with database
+    npm install --save mysql2
+- install sequelize as the ORM (object relational mapping) tool 
+    npm install sequelize
+- install dotenv to use environment variables
+    npm install dotenv
+- install bcrypt to hash passowrds
+    npm install bcrypt
+- install express-session to provide sessions touse coockies
+    npm install express-session
+- install connect-session-sequelize to add authentication
+    npm install connect-session-sequelize
+(the first installation will create a package-lock.json, or can aslo create everything at once)
+
+======================================================================
+3 CHANGE PACKAGE-LOCK.JSON
+    line 5 to:
+    "main": "server.js",
+======================================================================
+
+4 CREATE FOLDERS AND FILES 
+- server.js
+(setting up server configuurations)
+- - config/connections.js
+(using sequelize, I will require 'dotenv' configurations, create a connection to the database and export the sequelize configuration)
+- - db/schema.sql
+(create/drop table !!! NAME OF DATABASE --> tech_blogs_db)
+
+- - models/index.js
+    (creating and exporting a User model)
+- - models/User.js
+    (user model)
+
+- - - routes/api/index.js
+        ()
+
+======================================================================
+
+5 SOURCE NEWLY CREATED SHCEMA
+    mysql -u root -p
+    source db/schema.sql
+    exit 
