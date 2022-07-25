@@ -1,7 +1,8 @@
 //require express (glue)
 const express = require('express');
 //require api routes
-const routes = require('./routes');
+const routes = require('./controllers');
+// const routes = require('./routes');
 //require sequelize connections
 const sequelize = require('./config/connections');
 //creating a variable for the express

@@ -38,6 +38,8 @@ initialize npm to install
 4 CREATE FOLDERS AND FILES 
 - server.js
 (setting up server configuurations)
+- .env
+(database configuration)
 - - config/connections.js
 (using sequelize, I will require 'dotenv' configurations, create a connection to the database and export the sequelize configuration)
 - - db/schema.sql
@@ -57,3 +59,6 @@ initialize npm to install
     mysql -u root -p
     source db/schema.sql
     exit 
+======================================================================
+
+6 creating controllers/api/dashboard-routes.js
