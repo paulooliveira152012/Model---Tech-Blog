@@ -53,9 +53,9 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  User.create({
+  await User.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password
@@ -75,9 +75,9 @@ router.post('/', (req, res) => {
     });
 });
 
-router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
-  User.findOne({
+router.post('/login', async (req, res) => {
+  //await necessery when dealing with databases to receive all data before continuing with the application
+  await User.findOne({
     where: {
       email: req.body.email
     }
@@ -104,9 +104,9 @@ router.post('/login', (req, res) => {
   });
 });
 
-router.post('/logout', (req, res) => {
+router.post('/logout', async (req, res) => {
   if (req.session.loggedIn) {
-    req.session.destroy(() => {
+    await req.session.destroy(() => {
       res.status(204).end();
     });
   }
