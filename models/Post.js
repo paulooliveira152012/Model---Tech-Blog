@@ -69,4 +69,11 @@ Post.init(
   }
 );
 
+// {
+// 	"title": "My first post",
+// 	"post_url": "http://localhost:3001/api/posts"
+// }
+
+// sessions are constantly being reset 
+
 module.exports = Post;

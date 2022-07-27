@@ -61,3 +61,10 @@ User.init(
 );
 
 module.exports = User;
+
+// {
+// 	"username": "testUsername",
+// 	"email": "testing@gmail.com",
+// 	"password": "12345"
+// }
+

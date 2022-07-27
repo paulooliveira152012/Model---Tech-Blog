@@ -9,12 +9,12 @@ const helper = require('./utils/helpers');
 //creating a variable for the express
 const app = express();
 //require express.handlebars
-const exph = require('express-handlebars');
+const exphbs = require('express-handlebars');
 //importing path
 const path = require('path');
-const handlebars = exph.create({helper});
+const handlebars = exphbs.create({helper});
 const session = require('express-session');
-const sequelizeStore = require('connect-session-sequelize') (session.Store);
+const sequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 //setting up the port
@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'secret secret',
   cookie: {
-    maxAge: 24000
+    maxAge: 240000
   },
   resave: false,
   saveUninitialized: true,
@@ -31,9 +31,10 @@ const sess = {
   })
 
 }
+app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(session(sess));
+
 app.use(express.static(path.join(__dirname, "public")));
 app.engine("handlebars", handlebars.engine);
 app.set('view engine', 'handlebars')

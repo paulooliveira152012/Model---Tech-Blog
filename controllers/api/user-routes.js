@@ -3,6 +3,7 @@ const { User, Post, Comment, Vote } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
+  console.log(req.session)
   User.findAll({
     attributes: { exclude: ['password'] }
   })
@@ -65,9 +66,8 @@ router.post('/', async (req, res) => {
         req.session.user_id = dbUserData.id;
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
-  
-        res.json(dbUserData);
       });
+      res.json(dbUserData);
     })
     .catch(err => {
       console.log(err);
