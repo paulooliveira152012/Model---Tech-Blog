@@ -62,3 +62,21 @@ initialize npm to install
 ======================================================================
 
 6 creating controllers/api/dashboard-routes.js
+
+======================================================================
+
+
+home page is the landing page which contains:
+option to sign up
+option to log in
+displays all existing posts
+
+* create a post and send it trough insomnia 
+
+
+{
+	"username": "paulo123",
+	"email": "paulo@gmail.com",
+	"password": 12345"
+}
+
