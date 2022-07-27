@@ -12,7 +12,7 @@ const app = express();
 const exphbs = require('express-handlebars');
 //importing path
 const path = require('path');
-const handlebars = exphbs.create({helper});
+const handlebars = exphbs.create({helpers:helper});
 const session = require('express-session');
 const sequelizeStore = require('connect-session-sequelize')(session.Store);
 
