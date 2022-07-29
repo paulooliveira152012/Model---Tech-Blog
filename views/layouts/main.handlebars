@@ -23,7 +23,7 @@
       </h1>
       <nav>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
+        <a href="/login">log out</a>
         
         {{else}}
         <a href="/login">login</a>
@@ -34,12 +34,13 @@
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      Thanks for visiting! --landing page
     </footer>
   </div>
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  {{!-- <script src="/javascript/logout.js"></script> --}}
   {{/if}}
 </body>
 
