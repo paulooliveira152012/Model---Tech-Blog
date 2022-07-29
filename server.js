@@ -45,16 +45,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
-
-
-//problem with the session
-
-//make sure I'm requirering everything properly
-//make sure all of the variables match
-//make sure routes only uses either async OR .then
-//when using sequelize store, use capital for classes (commom practice)
-
-//last case scenerio --> get rid of auth
-//go through the module on the sessions portion
-//console log stuff to make sure each line is working properly
-  //console.trace 
