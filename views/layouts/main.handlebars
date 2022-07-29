@@ -14,9 +14,9 @@
   <div class="wrapper">
     <header>
       <ul>
-        <button id="main" class="btn-no-style" href="main" >Home</button>
+        <button id="main" class="btn-no-style" href="../homepage.handlebars" >Home</button>
         <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style" href="#" >logout</button>
+        {{!-- <button id="logout" class="btn-no-style" href="#" >logout</button> --}}
       </ul>
       <h1>
         <a href="/">Just Tech News</a>
@@ -40,7 +40,6 @@
   
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  {{!-- <script src="/javascript/logout.js"></script> --}}
   {{/if}}
 </body>
 
